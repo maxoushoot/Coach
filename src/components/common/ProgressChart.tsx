@@ -11,6 +11,7 @@ import {
   Filler,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import type { TooltipItem } from 'chart.js';
 
 ChartJS.register(
   CategoryScale,
@@ -67,7 +68,7 @@ const ProgressChart: React.FC<ProgressChartProps> = ({
       },
       tooltip: {
         callbacks: {
-          label: function(context: any) {
+          label: function(context: TooltipItem<'line'>) {
             return `${context.dataset.label}: ${context.raw}${unit}`;
           }
         }
@@ -80,7 +81,7 @@ const ProgressChart: React.FC<ProgressChartProps> = ({
           color: '#f3f4f6',
         },
         ticks: {
-          callback: function(value: any) {
+          callback: function(value: number) {
             return `${value}${unit}`;
           }
         }

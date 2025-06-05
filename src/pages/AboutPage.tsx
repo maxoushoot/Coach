@@ -35,7 +35,7 @@ const AboutPage = () => {
     {
       name: 'Sophie Martin',
       role: 'Directrice des Opérations',
-      bio: 'Experte en gestion sportive avec 10 ans d'expérience dans le développement de programmes fitness innovants.',
+      bio: "Experte en gestion sportive avec 10 ans d'expérience dans le développement de programmes fitness innovants.",
       image: 'https://images.pexels.com/photos/3757004/pexels-photo-3757004.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {

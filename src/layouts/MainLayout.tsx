@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { 
-  Menu, X, ChevronDown, Instagram, Facebook, Twitter, 
+  Menu, X, Instagram, Facebook, Twitter,
   Mail, Dumbbell, User
 } from 'lucide-react';
 import Logo from '../components/common/Logo';

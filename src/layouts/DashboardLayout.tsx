@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   Menu, X, Bell, User, Calendar, Activity, 
-  Users, MessageSquare, BookOpen, LogOut, 
-  ChevronDown, Settings
+  Users, MessageSquare, BookOpen, LogOut,
+  Settings
 } from 'lucide-react';
 import Logo from '../components/common/Logo';
 
