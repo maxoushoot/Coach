@@ -3,7 +3,11 @@ import { Calendar, Users, CreditCard, BarChart2, TrendingUp, MessageSquare, Book
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
-const CoachDashboard = () => {
+interface CoachDashboardProps {
+  isDemo?: boolean;
+}
+
+const CoachDashboard: React.FC<CoachDashboardProps> = ({ isDemo }) => {
   // Mock data for the dashboard
   const todaySessions = [
     {
@@ -80,6 +84,11 @@ const CoachDashboard = () => {
 
   return (
     <div className="animate-enter">
+      {isDemo && (
+        <div className="mb-4 p-3 text-sm rounded bg-orange-100 text-orange-800 text-center">
+          Vous utilisez la version démo. Les données sont fictives.
+        </div>
+      )}
       <div className="mb-8">
         <h1 className="text-2xl font-bold mb-2">Bienvenue, Thomas 👋</h1>
         <p className="text-gray-600">Voici un aperçu de votre activité aujourd'hui.</p>

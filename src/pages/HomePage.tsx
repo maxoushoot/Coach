@@ -81,12 +81,15 @@ const HomePage = () => {
               La plateforme professionnelle qui connecte coachs et clients pour un suivi fitness personnalisé et efficace.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/inscription" className="btn-accent">
-                Créer mon compte
+              <Link to="/dashboard/coach" className="btn-accent inline-flex items-center">
+                Accéder à l'espace Coach
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link to="/coachs" className="btn bg-white text-primary-900 hover:bg-gray-100">
-                Découvrir les coachs
+              <Link to="/dashboard/client" className="btn bg-white text-primary-900 hover:bg-gray-100">
+                Accéder à l'espace Client
+              </Link>
+              <Link to="/demo-coach" className="btn-outline text-white border-white hover:bg-white hover:text-primary-900">
+                Essayer la démo Coach
               </Link>
             </div>
           </div>
