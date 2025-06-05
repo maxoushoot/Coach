@@ -13,10 +13,18 @@ import CoachProfilePage from './pages/CoachProfilePage';
 import PricingPage from './pages/PricingPage';
 import AboutPage from './pages/AboutPage';
 import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignUpPage';
+import BlogPage from './pages/BlogPage';
+import ContactPage from './pages/ContactPage';
 
 // Dashboard Pages
 import ClientDashboard from './pages/dashboard/ClientDashboard';
 import CoachDashboard from './pages/dashboard/CoachDashboard';
+import ProgressPage from './pages/dashboard/ProgressPage';
+import SessionsPage from './pages/dashboard/SessionsPage';
+import ProgramsPage from './pages/dashboard/ProgramsPage';
+import ClientsPage from './pages/dashboard/ClientsPage';
+import MessagesPage from './pages/dashboard/MessagesPage';
 
 
 function App() {
@@ -32,6 +40,9 @@ function App() {
           <Route path="tarifs" element={<PricingPage />} />
           <Route path="a-propos" element={<AboutPage />} />
           <Route path="connexion" element={<LoginPage />} />
+          <Route path="inscription" element={<SignUpPage />} />
+          <Route path="blog" element={<BlogPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Route>
         
         {/* Demo coach accessible without inscription */}
@@ -43,6 +54,11 @@ function App() {
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route path="client" element={<ClientDashboard />} />
           <Route path="coach" element={<CoachDashboard />} />
+          <Route path="progres" element={<ProgressPage />} />
+          <Route path="seances" element={<SessionsPage />} />
+          <Route path="programmes" element={<ProgramsPage />} />
+          <Route path="clients" element={<ClientsPage />} />
+          <Route path="messages" element={<MessagesPage />} />
         </Route>
       </Routes>
     </Router>
