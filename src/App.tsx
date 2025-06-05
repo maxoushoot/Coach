@@ -18,6 +18,7 @@ import LoginPage from './pages/LoginPage';
 import ClientDashboard from './pages/dashboard/ClientDashboard';
 import CoachDashboard from './pages/dashboard/CoachDashboard';
 
+
 function App() {
   return (
     <Router>
@@ -33,6 +34,11 @@ function App() {
           <Route path="connexion" element={<LoginPage />} />
         </Route>
         
+        {/* Demo coach accessible without inscription */}
+        <Route path="demo-coach" element={<DashboardLayout />}>
+          <Route index element={<CoachDashboard isDemo />} />
+        </Route>
+
         {/* Dashboard routes with DashboardLayout */}
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route path="client" element={<ClientDashboard />} />
