@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Users, Clock, CreditCard, BarChart2, TrendingUp, MessageSquare, BookOpen } from 'lucide-react';
+import { Calendar, Users, CreditCard, BarChart2, TrendingUp, MessageSquare, BookOpen } from 'lucide-react';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
