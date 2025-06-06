@@ -30,11 +30,15 @@ const SessionCard: React.FC<SessionCardProps> = ({
   const formattedTime = format(date, 'HH:mm');
 
   return (
-    <div className="card overflow-hidden">
-      <div className={`px-4 py-2 text-white ${type === 'Groupe' ? 'bg-secondary-600' : 'bg-primary-600'}`}>
+    <div className="card overflow-hidden sm:flex">
+      <div
+        className={`px-4 py-2 text-white ${
+          type === 'Groupe' ? 'bg-secondary-600' : 'bg-primary-600'
+        } sm:w-40 sm:flex-shrink-0 sm:flex sm:items-center sm:justify-center`}
+      >
         <span className="font-medium">{type}</span>
       </div>
-      <div className="p-5">
+      <div className="p-5 sm:p-6 flex-1">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         
         <div className="space-y-2 mb-4">

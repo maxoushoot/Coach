@@ -32,7 +32,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         </div>
       )}
       
-      <div className="p-6 flex-1">
+      <div className="p-5 sm:p-6 flex-1">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         
@@ -53,7 +53,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         </ul>
       </div>
       
-      <div className="p-6 pt-0 mt-auto">
+      <div className="p-5 pt-0 sm:p-6 sm:pt-0 mt-auto">
         <button
           onClick={onSubscribe}
           className={`w-full ${isPopular ? 'btn-primary' : 'btn-outline'}`}

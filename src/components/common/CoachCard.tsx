@@ -23,15 +23,15 @@ const CoachCard: React.FC<CoachCardProps> = ({
 }) => {
   return (
     <Link to={`/coachs/${id}`} className="block group">
-      <div className="card overflow-hidden h-full transition-all duration-300 group-hover:shadow-lg">
-        <div className="relative h-48">
+      <div className="card overflow-hidden h-full transition-all duration-300 group-hover:shadow-lg sm:flex">
+        <div className="relative h-48 sm:h-auto sm:w-40 flex-shrink-0">
           <img
             src={image}
             alt={name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
-        <div className="p-5">
+        <div className="p-5 sm:flex-1">
           <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-600 transition-colors">{name}</h3>
           
           <div className="flex flex-wrap gap-2 mb-3">
