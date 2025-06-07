@@ -15,6 +15,7 @@ import AboutPage from './pages/AboutPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 import ContactPage from './pages/ContactPage';
 
 // Dashboard Pages
@@ -25,6 +26,8 @@ import SessionsPage from './pages/dashboard/SessionsPage';
 import ProgramsPage from './pages/dashboard/ProgramsPage';
 import ClientsPage from './pages/dashboard/ClientsPage';
 import MessagesPage from './pages/dashboard/MessagesPage';
+import ProfilePage from './pages/dashboard/ProfilePage';
+import SettingsPage from './pages/dashboard/SettingsPage';
 
 
 function App() {
@@ -42,6 +45,7 @@ function App() {
           <Route path="connexion" element={<LoginPage />} />
           <Route path="inscription" element={<SignUpPage />} />
           <Route path="blog" element={<BlogPage />} />
+          <Route path="blog/:id" element={<BlogPostPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Route>
         
@@ -59,6 +63,8 @@ function App() {
           <Route path="programmes" element={<ProgramsPage />} />
           <Route path="clients" element={<ClientsPage />} />
           <Route path="messages" element={<MessagesPage />} />
+          <Route path="profil" element={<ProfilePage />} />
+          <Route path="parametres" element={<SettingsPage />} />
         </Route>
       </Routes>
     </Router>

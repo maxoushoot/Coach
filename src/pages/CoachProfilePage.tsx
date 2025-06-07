@@ -1,11 +1,12 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Star, MapPin, Award, Clock, Calendar, Users } from 'lucide-react';
 import { coaches } from '../data/mockData';
 import SessionCard from '../components/common/SessionCard';
 
 const CoachProfilePage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const coach = coaches.find(c => c.id === id);
 
   if (!coach) {
@@ -150,10 +151,16 @@ const CoachProfilePage = () => {
           <div className="space-y-6">
             {/* Quick Actions */}
             <div className="card p-6">
-              <button className="btn-primary w-full mb-3">
+              <button
+                className="btn-primary w-full mb-3"
+                onClick={() => navigate('/inscription')}
+              >
                 Réserver une séance
               </button>
-              <button className="btn-outline w-full">
+              <button
+                className="btn-outline w-full"
+                onClick={() => navigate('/contact')}
+              >
                 Contacter
               </button>
             </div>
