@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/mockData';
 
 const BlogPage: React.FC = () => {
@@ -20,7 +21,9 @@ const BlogPage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
                 <p className="text-gray-600 mb-4">{post.excerpt}</p>
                 <div className="mt-auto">
-                  <button className="btn-outline w-full">Lire l'article</button>
+                  <Link to={`/blog/${post.id}`} className="btn-outline w-full">
+                    Lire l'article
+                  </Link>
                 </div>
               </div>
             </div>

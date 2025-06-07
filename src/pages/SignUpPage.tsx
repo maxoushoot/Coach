@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignUpPage: React.FC = () => {
   const [form, setForm] = useState({
@@ -9,6 +10,7 @@ const SignUpPage: React.FC = () => {
   });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -38,6 +40,7 @@ const SignUpPage: React.FC = () => {
     // In a real app we would send the data to the server here
     setSuccess('Compte créé avec succès !');
     setForm({ name: '', email: '', password: '', confirm: '' });
+    navigate('/dashboard/client');
   };
 
   return (

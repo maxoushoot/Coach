@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, Users, CreditCard, BarChart2, TrendingUp, MessageSquare, BookOpen } from 'lucide-react';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
@@ -8,6 +9,7 @@ interface CoachDashboardProps {
 }
 
 const CoachDashboard: React.FC<CoachDashboardProps> = ({ isDemo }) => {
+  const navigate = useNavigate();
   // Mock data for the dashboard
   const todaySessions = [
     {
@@ -182,19 +184,31 @@ const CoachDashboard: React.FC<CoachDashboardProps> = ({ isDemo }) => {
           <div className="card p-4">
             <h3 className="font-semibold mb-4">Actions rapides</h3>
             <div className="grid grid-cols-2 gap-3">
-              <button className="btn-primary text-sm py-2">
+              <button
+                className="btn-primary text-sm py-2"
+                onClick={() => navigate('/dashboard/seances')}
+              >
                 <Calendar className="h-4 w-4 mr-2" />
                 Nouvelle séance
               </button>
-              <button className="btn-outline text-sm py-2">
+              <button
+                className="btn-outline text-sm py-2"
+                onClick={() => navigate('/dashboard/clients')}
+              >
                 <Users className="h-4 w-4 mr-2" />
                 Ajouter client
               </button>
-              <button className="btn-outline text-sm py-2">
+              <button
+                className="btn-outline text-sm py-2"
+                onClick={() => navigate('/dashboard/programmes')}
+              >
                 <BookOpen className="h-4 w-4 mr-2" />
                 Créer programme
               </button>
-              <button className="btn-outline text-sm py-2">
+              <button
+                className="btn-outline text-sm py-2"
+                onClick={() => navigate('/dashboard/messages')}
+              >
                 <MessageSquare className="h-4 w-4 mr-2" />
                 Messages
               </button>
@@ -236,9 +250,12 @@ const CoachDashboard: React.FC<CoachDashboardProps> = ({ isDemo }) => {
               ))}
             </div>
             <div className="p-3 bg-gray-50 border-t text-center">
-              <a href="#" className="text-primary-600 text-sm font-medium hover:text-primary-700">
+              <button
+                className="text-primary-600 text-sm font-medium hover:text-primary-700"
+                onClick={() => navigate('/dashboard/clients')}
+              >
                 Voir tous les clients
-              </a>
+              </button>
             </div>
           </div>
 

@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, Users, Activity, TrendingUp, Trophy } from 'lucide-react';
 import ProgressChart from '../../components/common/ProgressChart';
 
 const ClientDashboard = () => {
+  const navigate = useNavigate();
   // Mock data for the dashboard
   const upcomingSessions = [
     {
@@ -145,7 +147,10 @@ const ClientDashboard = () => {
                 <p className="text-gray-600">Aucune séance programmée</p>
               )}
               <div className="mt-4">
-                <button className="btn-primary w-full">
+                <button
+                  className="btn-primary w-full"
+                  onClick={() => navigate('/dashboard/seances')}
+                >
                   Réserver une séance
                 </button>
               </div>

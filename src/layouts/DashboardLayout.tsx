@@ -228,12 +228,13 @@ const DashboardLayout = () => {
                       </div>
                     )}
                     <div className="border-t border-gray-100">
-                      <a
-                        href="#"
+                      <Link
+                        to="/dashboard/messages"
                         className="block px-4 py-2 text-sm text-center text-primary-600 hover:bg-gray-50"
+                        onClick={() => setIsNotificationsOpen(false)}
                       >
                         Voir toutes les notifications
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -270,26 +271,28 @@ const DashboardLayout = () => {
                       <div className="font-medium">{currentUser.name}</div>
                       <div className="text-gray-500">{currentUser.email}</div>
                     </div>
-                    <a
-                      href="#"
+                    <Link
+                      to="/dashboard/profil"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       role="menuitem"
+                      onClick={() => setIsProfileMenuOpen(false)}
                     >
                       <div className="flex items-center">
                         <User className="mr-3 h-5 w-5 text-gray-400" />
                         Profil
                       </div>
-                    </a>
-                    <a
-                      href="#"
+                    </Link>
+                    <Link
+                      to="/dashboard/parametres"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       role="menuitem"
+                      onClick={() => setIsProfileMenuOpen(false)}
                     >
                       <div className="flex items-center">
                         <Settings className="mr-3 h-5 w-5 text-gray-400" />
                         Paramètres
                       </div>
-                    </a>
+                    </Link>
                     <button
                       onClick={handleSignOut}
                       className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
